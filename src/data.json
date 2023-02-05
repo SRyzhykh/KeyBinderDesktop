@@ -1,5 +1,11 @@
 {
-  "lists": ["LIST1", "LIST2"],
+  "lists": [{
+    "id": 0,
+    "name": "LIST1"
+  }, {
+    "id": 1,
+    "name":"LIST2"
+  }],
   "data": [[
     {
       "name": "P",
