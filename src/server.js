@@ -31,9 +31,11 @@ app.use(keyListRouter)
 
 v.addListener(function (e, down) {
     for (let i = 0; i < data.length; i++) {
-        if (data[i].name === e.name && e.state === 'UP') {
-            robot.keyTap('backspace')
-            robot.typeString(data[i].text)
+        for (let j = 0; j < data[i].length; j++) {
+            if (data[i][j].name === e.name && e.state === 'UP') {
+                robot.keyTap('backspace')
+                robot.typeString(data[i][j].text)
+            }
         }
     }
 });
